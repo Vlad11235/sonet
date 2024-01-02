@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  sonet_app:
+    # environment:
+    #   - PYTHON_VERSION=python:3.10.7-slim
+    #   - FLASK_APP=views.py # основное приложение  
+    #   - FLASK_DEBUG=1 # обновление
+    #   - PYTHONUNBUFFERED=True # print работет
+      # - PROXIES=None
+    # env_file:
+    #   - .env
+    # image: ${DIAMAIR_VERSION}
+    build: .
+    container_name: sonet_app
+    ports:
+      - 80:8000
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
+    # "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    # networks:
+    #     my-network:
+    #       aliases:
