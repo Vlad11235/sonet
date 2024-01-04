@@ -11,6 +11,6 @@ router = APIRouter(
 @router.get("/")
 @router.get("/index")
 async def get_hello():
-    # ваша логика регистрации
+    # логика регистрации
     # возвращаем идентификатор пользователя
     return {"test": "Hello"}
