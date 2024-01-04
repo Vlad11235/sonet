@@ -38,14 +38,12 @@ async def delete_post(id: str):
 @router.get("/get/{id}", response_model=Post)
 async def get_post(id: str):
     # Реализация логики для получения информации о посте по его идентификатору
-    # Замените этот код на вашу собственную реализацию
     example_post = Post(id="1d535fd6-7521-4cb1-aa6d-031be7123c4d", text="Some post text", author_user_id="12345")
     return example_post
 
 @router.get("/feed", response_model=List[Post])
 async def get_post_feed(offset: int = 0, limit: int = 10):
     # Реализация логики для получения ленты постов
-    # Замените этот код на вашу собственную реализацию
     example_post1 = Post(id="1d535fd6-7521-4cb1-aa6d-031be7123c4d", text="Some post text 1", author_user_id="12345")
     example_post2 = Post(id="6f49a45a-83b7-4920-9e3c-4af5c893d679", text="Some post text 2", author_user_id="67890")
     return [example_post1, example_post2]

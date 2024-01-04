@@ -10,7 +10,7 @@ router = APIRouter(
 
 @router.post("/register")
 async def register(user: User):
-    # ваша логика регистрации
+    # логика регистрации
     # возвращаем идентификатор пользователя
     return {"user_id": "e4d2e6b0-cde2-42c5-aac3-0b8316f21e58"}
 
